@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-my-teams',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyTeamsPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private navCtrl: NavController
+  ) { }
 
   ngOnInit() {
+  }
+
+  goToTournaments() {
+    this.navCtrl.navigateForward('tournaments');
   }
 
 }
